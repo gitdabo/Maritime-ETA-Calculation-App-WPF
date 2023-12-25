@@ -1,0 +1,54 @@
+﻿<Window x:Class="MOCAppWPF.DistanceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MOCAppWPF"
+        mc:Ignorable="d" FontSize="22"
+        Title="DistanceWindow" Height="450" Width="520" MinHeight="450" MinWidth="520" MaxHeight="450" MaxWidth="520">
+    <Grid Background="#FF0885C0">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0 10 0 10" 
+                   FontWeight="Bold" FontSize="25" TextDecorations="Underline">Please enter parameters below...</TextBlock>
+
+
+        <TextBlock Grid.Column="1" Grid.Row="1"  Padding="5" Margin="5 5 0 0" FontWeight="DemiBold" HorizontalAlignment="Right">Time in mins</TextBlock>
+        <TextBox x:Name="timeTextBox" Grid.Column="2" Grid.Row="1" Width="70" Height="30" Margin="10 5 0 0 " FontSize="18" 
+                     Foreground="#FFF50B0B" HorizontalAlignment="Left" BorderThickness="2,2,2,2" FontWeight="Regular"/>
+
+        <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="5" Margin=" 5 5 0 0" 
+                   FontWeight="DemiBold">Speed in kts</TextBlock>
+        <TextBox x:Name="speedTextBox" Grid.Column="2" Grid.Row="2" Width="70" Height="30" VerticalAlignment="Center" 
+                      HorizontalAlignment="Left" Margin="10 5 0 0"  FontSize="18" BorderThickness="2,2,2,2" 
+                 FontWeight="Regular" Foreground="#FFF50B0B"/>
+
+        <Button x:Name="calculateDistanceButton" Grid.Column="1" Grid.Row="3"  Grid.ColumnSpan="2" VerticalAlignment="Center"
+                Width="200" Height="50" Margin="0 30" Click="calculateDistanceButton_Click" FontWeight="SemiBold" 
+                BorderBrush="Black" Background="#FF33DC16">Distance</Button>
+
+        <TextBlock x:Name="distanceResultLabel" Grid.Column="1" Grid.Row="4" FontStyle="Italic" 
+                   Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="" Margin="10 10" 
+                   Foreground="#FFF6DE3B" ></TextBlock>
+
+        <Button x:Name="mainMenuButton" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
+                Width="200" Height="50" VerticalAlignment="Top" Content="Main menu" Margin="0 75" Click="mainMenuButton_Click" 
+                FontWeight="SemiBold" BorderBrush="Black" Background="#FFC71010" Foreground="#FFF2E5E5"></Button>
+
+    </Grid>
+</Window>

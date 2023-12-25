@@ -1,0 +1,65 @@
+﻿<Window x:Class="MOCAppWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MOCAppWPF"
+        mc:Ignorable="d" FontSize="22" 
+        Title="MainWindow" Height="450" Width="720" MinHeight="450" MinWidth="650" MaxWidth="750" MaxHeight="450">
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="Black" Offset="0.411"/>
+            <GradientStop Color="#FF3555F0" Offset="0.685"/>
+        </RadialGradientBrush>
+    </Window.Background>
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" HorizontalAlignment="Center" Margin="10" FontSize="30" FontWeight="Bold" TextDecorations="Underline" Foreground="Black">***Welcome to the MOC APP***</TextBlock>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" HorizontalAlignment="Center" 
+                   Margin="0 10" FontWeight="Bold" Foreground="#FFF4F0F0" >Please select an option...</TextBlock>
+
+
+        <Button x:Name="calculateETAButton" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan ="2" 
+                Padding="10" Margin="0 5" Click="calculateETAButton_Click" Background="#FF89CF12" 
+                BorderBrush="#FF080404" FontWeight="SemiBold" BorderThickness="1,1,1,1" Foreground="#FF040101">Calc Vessel ETA</Button>
+
+        <Button x:Name="calculateSpeedButton" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan ="2" 
+                Padding="10" Margin="0 5" Click="calculateSpeedButton_Click" BorderBrush = "#FF080404" BorderThickness="1,1,1,1" 
+                FontWeight="SemiBold" Background="#FFB6B7A6">Calc Vessel Speed</Button>
+
+        <Button x:Name="calculateDistanceButton" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan ="2" 
+                Padding="10" Margin="0 5" Click="calculateDistanceButton_Click" BorderBrush="#FF080404"
+                FontWeight="SemiBold" BorderThickness="1,1,1,1">Calc Vessel Distance</Button>
+
+
+        <Button x:Name="exitButton" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6" VerticalAlignment="Top" Margin="30"  Height="50" MinWidth="120"
+                    Click="exitButton_Click" FontWeight="SemiBold" Foreground="#FFF1F7F7" BorderBrush="#FF0B0202" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFA81111" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background> EXIT
+        </Button>
+
+
+    </Grid>
+</Window>
